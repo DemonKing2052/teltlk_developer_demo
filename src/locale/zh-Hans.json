@@ -1,0 +1,81 @@
+{
+	"activity.title":"征集",
+	"activity.introduction": "活动介绍",
+	"activity.signup": "活动报名",
+	"activity.start": "活动开始",
+	"activity.end": "活动结束",
+	"activity.Theme": "活动主题",
+	"activity.Marketplace": "TELTLK NFT市场名称征集",
+	"activity.Participants": "参与对象",
+	"activity.registered": "所有TELTLK注册用户",
+	"activity.Rule": "活动规则",
+	"activity.rule_One": "1、每个人最多提交5个名称，包含中文名称和英文名称，不能重复提交，名称相同者以提交时间最先的为准。提交的名称应与",
+	"activity.rule_Two": "2、名称建议最终获得采纳的，将获得项目方提供神秘礼物一份。",
+	"activity.rule_Three": "3、征名一经采用，相关的著作权、使用权、发布权等即归TELTLK所有。",
+	"activity.suggestedName": "您的建议名称",
+	"activity.creative": "思路及创意理念（选填）",
+	"activity.suggestion": "请输入您的建议名称",
+	"activity.words": "不超过300字",
+	"activity.Submit": "提交",
+	"activity.SubmittedName": "我已提交名称",
+	"login.error":"登录失败",
+	"Submission failed":"提交失败",
+	
+	//pi商圈tabbar
+	"tabbar.home":"首页",
+	"tabbar.store":"商城",
+	"tabbar.browse":"浏览",
+	"tabbar.mine":"我的",
+	
+	//首页
+	"home.login.title":"TELTLK NFT市场",
+	"home.login.illustrate":"申请获取你的TELTLK用户资料(包括昵称、ID、头像、认证信息等)",
+	"home.login.test":"并验证你的TELTLK ID",
+	"home.login.cancellation":"不允许",
+	"home.popular.title":"热门",
+	"home.popular.btn":"更多",
+	"home.recommend.title":"推荐",
+	
+	//合集
+	"Collection.index.Number":"藏品数",
+	"Collection.index.royalty":"版税",
+	"Collection.index.bidding":"合集出价",
+	"Collection.CollectionList.placeholder":"请输入搜索合集内藏品名称",
+	
+	
+	//我的
+	"User.searchlist.personal":"个人资料",
+	"User.searchlist.goods":"我的订单",
+	"User.searchlist.collect":"我的收藏",
+	"User.searchlist.collect.Onsale":"出售中",
+	"User.searchlist.achieve":"我的创作",
+	"User.searchlist.Cart":"购物车",
+	"User.searchlist.wallet":"我的钱包",
+	"User.mynft.title":"我的NFT",
+	"User.goCreate.title":"创作",
+	"my.wallet":"我的钱包",
+	"my.wallet.balance":"余额",
+	"my.wallet.balance.Withdrawal":"提现",
+	"my.wallet.balance.Withdrawal.can":"可提现金额",
+	"my.wallet.balance.Withdrawal.title":"提现到TELTLK钱包",
+	"my.wallet.balance.Withdrawal.tips":"请输入金额",
+	"my.wallet.balance.Withdrawal.Allwithdrawals":"全部提现",
+	"my.wallet.balance.Withdrawal.residue":"当前可提现余额",
+	"my.wallet.balance.Withdrawal.records":"提现记录",
+	"my.wallet.Consumption":"消费明细",
+	"my.wallet.Revenue":"收益明细",
+	"my.wallet.Recommendation":"推荐奖励",
+	
+	//成功提示
+	"release.success":"支付成功",
+	
+	//失败提示
+	"release.fail":"支付失败",
+	
+	//缺省提示
+	"User.mynft.fail":"您还没有NFT",
+	"User.transaction.fail":"暂时没有交易动态",
+	"User.achieve.fail":"暂无内容",
+	"User.trends.fail":"暂时没有交易动态",
+	"Collection.CollectionList.Missing":"该合集已无藏品"
+}

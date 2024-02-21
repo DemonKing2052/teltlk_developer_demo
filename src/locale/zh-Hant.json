@@ -1,0 +1,82 @@
+{	
+	"activity.title":"征集",
+	"activity.introduction": "活動介紹",
+	"activity.signup": "活動報名",
+	"activity.start": "活動開始",
+	"activity.end": "活動結束",
+	"activity.Theme": "活動主題",
+	"activity.Marketplace": "TELTLK NFT市場名稱徵集",
+	"activity.Participants": "參與對象",
+	"activity.registered": "所有TELTLK註冊用戶",
+	"activity.Rule": "活動規則",
+	"activity.rule_One": "1、每個人最多提交5個名稱，包含中文名稱和英文名稱，不能重複提交，名稱相同者以提交時間最先的為准。 提交的名稱應與",
+	"activity.rule_Two": "2、名稱建議最終獲得採納的，將獲得項目方提供神秘禮物一份。",
+	"activity.rule_Three": "3、征名一經採用，相關的著作權、使用權、發佈權等即歸TELTLK所有。",
+	"activity.suggestedName": "您的建議名稱",
+	"activity.creative": "思路及創意理念（選填）",
+	"activity.suggestion": "請輸入您的建議名稱",
+	"activity.words": "不超過300字",
+	"activity.Submit": "提交",
+	"activity.SubmittedName": "我已提交名稱",
+
+	"login.error":"登入失敗",
+	"Submission failed":"提交失敗",
+	
+	//pi商圈tabbar
+	"tabbar.home":"首頁",
+	"tabbar.store":"商城",
+	"tabbar.browse":"瀏覽",
+	"tabbar.mine":"我的",
+	
+	//首页
+	
+	"home.login.title":"TELTLK NFT市場",
+	"home.login.illustrate":"申請獲取你的TELTLK使用者資料（包括昵稱、ID、頭像、認證資訊等）",
+	"home.login.test":"並驗證你的TELTLK ID",
+	"home.login.cancellation":"不允許",
+	"home.popular.title":"熱門",
+	"home.popular.btn":"更多",
+	"home.recommend.title":"推薦",
+	
+	//合集
+	"Collection.index.Number":"藏品數",
+	"Collection.index.royalty":"版稅",
+	"Collection.index.bidding":"合集出價",
+	"Collection.CollectionList.placeholder":"請輸送蒐索合集內藏品名稱",
+	
+	//我的
+	"User.searchlist.personal":"個人資料",
+	"User.searchlist.goods":"我的訂單",
+	"User.searchlist.collect":"我的收藏",
+	"User.searchlist.collect.Onsale":"出售中",
+	"User.searchlist.achieve":"我的創作",
+	"User.searchlist.Cart":"購物車",
+	"User.searchlist.wallet":"我的錢包",
+	"User.mynft.title":"我的NFT",
+	"User.goCreate.title":"創作",
+	"my.wallet":"我的錢包",
+	"my.wallet.balance":"余额",
+	"my.wallet.balance.Withdrawal":"提現",
+	"my.wallet.balance.Withdrawal.can":"可提現金額",
+	"my.wallet.balance.Withdrawal.title":"提現到TELTLK錢包",
+	"my.wallet.balance.Withdrawal.tips":"請輸入金額",
+	"my.wallet.balance.Withdrawal.Allwithdrawals":"全部提現",
+	"my.wallet.balance.Withdrawal.residue":"當前零錢餘額",
+	"my.wallet.balance.Withdrawal.records":"提現記錄",
+	"my.wallet.Consumption":"消费明细",
+	"my.wallet.Revenue ":"收益明细",
+	"my.wallet.Recommendation":"推荐奖励",
+	
+	//成功提示
+	"release.success":"支付成功",
+	
+	//失败提示
+	"release.fail":"支付失败",
+	
+	//缺省提示
+	"User.mynft.fail":"您還沒有創作NFT",
+	"User.transaction.fail":"暫時沒有交易動態",
+	"User.achieve.fail":"您還沒有進行過創作",
+	"User.trends.fail":"暫時沒有交易動態",
+	"Collection.CollectionList.Missing":"該合集已無藏品"
+}

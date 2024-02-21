@@ -1,0 +1,81 @@
+{
+	"activity.title":"collect",
+	"activity.introduction": "Introduction",
+	"activity.signup": "Sign up",
+	"activity.start": "Start",
+	"activity.end": "End",
+	"activity.Theme": "Theme",
+	"activity.Marketplace": "TELTLK NFT Marketplace Call for Names",
+	"activity.Participants": "Participants",
+	"activity.registered": "All registered users of TELTLK",
+	"activity.Rule": "Rule",
+	"activity.rule_One": "1、Each users can submit a maximum of 5 names, including Chinese names and English names. Repeated submissions are not allowed. For those with the same name, the earliest submission time shall prevail. The submitted name should be associated with TELTLK products and functions, and not infringe the intellectual property rights of other third parties.",
+	"activity.rule_Two": "2、If the name suggestion is finally adopted, a mysterious gift will be provided by the project party.",
+	"activity.rule_Three": " 3、Once the solicitation is adopted, the relevant copyrights, usage rights, publishing rights, etc. shall be owned by TELTLK.",
+	"activity.suggestedName": "Suggested name",
+	"activity.creative": "Ideas and creative concepts (optional)",
+	"activity.suggestion": "Please enter your suggestion name",
+	"activity.words": "Within 300 words",
+	"activity.Submit": "Submit",
+	"activity.SubmittedName": "Submitted name",
+
+	"login.error":"Login failed",
+	"Submission failed":"Submission failed",
+	
+	//pi商圈tabbar
+	"tabbar.home":"Home",
+	"tabbar.store":"Store",
+	"tabbar.browse":"Browse",
+	"tabbar.mine":"Mine",
+	
+	//首页
+	"home.login.title":"TELTLK VFT Market",
+	"home.login.illustrate":"Apply to obtain your TELTLK user information (including nickname, ID, avatar, authentication information, etc.)",
+	"home.login.test":"And verify your TELTLK ID",
+	"home.login.cancellation":"not allow",
+	"home.popular.title":"Popular",
+	"home.popular.btn":"More",
+	"home.recommend.title":"recommend",
+	
+	//合集
+	"Collection.index.Number":"Number",
+	"Collection.index.royalty":"Royalty",
+	"Collection.index.bidding":"Bidding",
+	"Collection.CollectionList.placeholder":"Please send the names of the collections in the search collection",
+	
+	//我的
+	"User.searchlist.personal":"Profile",
+	"User.searchlist.goods":"Order",
+	"User.searchlist.collect":"Collection",
+	"User.searchlist.collect.Onsale":"Onsale",
+	"User.searchlist.achieve":"Creation",
+	"User.searchlist.Cart":"Cart",
+	"User.searchlist.wallet":"Wallet",
+	"User.mynft.title":"My NFT",
+	"User.goCreate.title":"create",
+	"my.wallet":"My wallet",
+	"my.wallet.balance":"balance",
+	"my.wallet.balance.Withdrawal":"Withdrawal",
+	"my.wallet.balance.Withdrawal.can":"Withdrawable amount",
+	"my.wallet.balance.Withdrawal.title":"Withdrawal to TELTLK wallet",
+	"my.wallet.balance.Withdrawal.tips":"Please enter the amount",
+	"my.wallet.balance.Withdrawal.Allwithdrawals":"All withdrawals",
+	"my.wallet.balance.Withdrawal.residue":"Current change balance",
+	"my.wallet.balance.Withdrawal.records":"Withdrawal records",
+	"my.wallet.Consumption":"Consumption details",
+	"my.wallet.Revenue ":"Revenue details",
+	"my.wallet.Recommendation":"Recommendation rewards",
+	
+	//成功提示
+	"release.success":"Payment successful",
+	
+	//失败提示
+	"release.fail":"Payment failed",
+	
+	//缺省提示
+	"User.mynft.fail":"You haven't created an NFT yet",
+	"User.transaction.fail":"There is currently no trading activity",
+	"User.achieve.fail":"You haven't created anything yet",
+	"User.trends.fail":"There is currently no trading activity",
+	"Collection.CollectionList.Missing":"This collection has no collection left"
+}
