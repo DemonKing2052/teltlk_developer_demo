@@ -1,38 +1,44 @@
 <template>
 	<view class="home">
 		<view class="infolist" v-for="(item,index) in List">
-			<image class="logo" src="@/static/Home/LOGO.png"></image>
-			<view class="right">
-				<view class="item">
-					名称：{{item.name}}
-				</view>
-				<view class="item">
-					创建人：{{item.founder}}
-				</view>
-				<view class="item">
-					群号：{{item.GroupID}}
+			<view class="top">
+				<image class="logo" src="@/static/Home/LOGO.png"></image>
+				<view class="information">
+					<view class="item">
+						群名：{{item.name}}
+					</view>
+					<view class="item">
+						群主：{{item.founder}}
+					</view>
+					<view class="item">
+						群号：{{item.GroupID}}
+					</view>
+					<view class="item">
+						人数：500
+					</view>
 				</view>
 			</view>
 			<view class="btns">
 				<view class="btn" @click="GroupMember(item.GroupID,item.openID)">
 					加入群聊
 				</view>
-				<view class="btn" @click="ContactUsers(item.openID)">
-					联系用户
+				<view class="btn" style="border: none; color: #F29901;" @click="ContactUsers(item.openID)">
+					联系群主
 				</view>
 			</view>
 		</view>
 		<view class="newly" @click="newlyAdded">
-			新增测试
+			新增群聊
 		</view>
 		<view>
 			<u-popup :show="show" :closeOnClickOverlay="false" mode="center" @close="show = false" @open="show = true">
 				<view class="Group">
 					<view class="header">
-						新增测试
+						新增群聊
 					</view>
 					<view class="put">
-						<u-input placeholder="请输入群名称" @clear="clear" border="surround" :clearable="true" v-model="groupName"></u-input>
+						<u-input placeholder="请输入群名称" @clear="clear" border="surround" :clearable="true"
+							v-model="groupName"></u-input>
 					</view>
 					<view class="btns">
 						<view class="confirm" @click="nweGroup(groupName)">
@@ -42,7 +48,7 @@
 							取消
 						</view>
 					</view>
-					
+
 				</view>
 			</u-popup>
 		</view>
@@ -70,14 +76,14 @@
 		List.value = infor
 		console.log(List.value)
 	})
-	
-	
-	const GroupMember = (groupID,OpenID) =>{
-		TeltlkModule.IsGroupMember(groupID,OpenID).then((res)=>{
+
+
+	const GroupMember = (groupID, OpenID) => {
+		TeltlkModule.IsGroupMember(groupID, OpenID).then((res) => {
 			Joingroup(groupID)
-		}).catch((err)=>{
+		}).catch((err) => {
 			uni.showToast({
-				title: "验证是否加入群聊失败"+err,
+				title: "验证是否加入群聊失败" + err,
 				icon: 'none'
 			})
 		})
@@ -89,61 +95,64 @@
 			console.log("加入群聊成功")
 		}).catch((err) => {
 			uni.showToast({
-				title: "加群调用失败"+err,
+				title: "加群调用失败" + err,
 				icon: 'none'
 			})
 		})
 	}
-	
+
 	const ContactUsers = (openID) => {
 		console.log(openID)
 		TeltlkModule.AddFriend(openID).then((res) => {
 			console.log("添加好友调用成功")
 		}).catch((err) => {
 			uni.showToast({
-				title: "添加好友调用失败"+err,
+				title: "添加好友调用失败" + err,
 				icon: 'none'
 			})
 		})
 	}
 
 	const nweGroup = (groupName) => {
-		uni.showLoading({ title: '新增群聊中',mask:true});
+		uni.showLoading({
+			title: '新增群聊中',
+			mask: true
+		});
 		show.value = false
 		let user = uni.getStorageSync("User")
 		TeltlkModule.CreateGroup(groupName, user.openID).then((res) => {
 			let group = {
-				name:res.groupName,
-				GroupID:res.groupID,
-				founder:user.nickname,
-				openID:user.openID
+				name: res.groupName,
+				GroupID: res.groupID,
+				founder: user.nickname,
+				openID: user.openID
 			}
 			List.value = List.value.concat(group);
 			clear()
 		}).catch((err) => {
 			uni.hideLoading();
-			if(groupName==''){
+			if (groupName == '') {
 				uni.showToast({
 					title: "群名不能为空",
 					icon: 'none'
 				})
-			}else{
+			} else {
 				clear()
 				uni.showToast({
-					title: "新增群聊失败"+err,
+					title: "新增群聊失败" + err,
 					icon: 'none'
 				})
 			}
-			
+
 		})
 	}
-	
-	const cancellation = () =>{
+
+	const cancellation = () => {
 		groupName.value = ''
 		show.value = false
 	}
-	
-	const clear = () =>{
+
+	const clear = () => {
 		uni.hideLoading();
 		groupName.value = ''
 	}
@@ -161,51 +170,37 @@
 		align-items: center;
 
 		.infolist {
-			width: 720rpx;
-			height: 200rpx;
-			background-color: bisque;
+			width: 680rpx;
+			padding: 20rpx 20rpx 0 20rpx;
 			margin-top: 20rpx;
 			border-radius: 20rpx;
-			display: flex;
-			align-items: center;
+			box-shadow: 0rpx 0rpx 8rpx 0rpx rgba(0, 0, 0, 0.1);
 
-			.logo {
-				width: 120rpx;
-				height: 120rpx;
-				margin: 0 20rpx;
-			}
+			.top {
+				display: flex;
 
-			.right {
-				width: 350rpx;
-				margin-right: 20rpx;
-
-				.item {
-					width: 350rpx;
-					white-space: nowrap;
-					/* 防止文字换行 */
-					overflow: hidden;
-					/* 隐藏超出部分 */
-					text-overflow: ellipsis;
-					/* 可选，添加省略号以指示被截断的文本 */
+				.logo {
+					margin-right: 50rpx;
+					width: 150rpx;
+					height: 150rpx;
 				}
-
 			}
 
 			.btns {
-				height: 120rpx;
 				display: flex;
-				flex-direction: column;
 				justify-content: space-between;
+				border-top: 1rpx solid #D4D4D4;
+				margin-top: 20rpx;
 
 				.btn {
-					width: 150rpx;
+					width: 50%;
 					height: 50rpx;
-					background-color: #ccc;
-					border-radius: 20rpx;
-					font-size: 24rpx;
+					font-size: 32rpx;
 					font-weight: 500;
 					text-align: center;
 					line-height: 50rpx;
+					padding: 20rpx 0;
+					border-right: 1rpx solid #D4D4D4;
 				}
 			}
 		}
@@ -213,35 +208,46 @@
 		.newly {
 			position: fixed;
 			bottom: 20rpx;
-			width: 200rpx;
+			width: 430rpx;
 			height: 80rpx;
-			border-radius: 80rpx;
+			border-radius: 20rpx;
 			text-align: center;
 			line-height: 80rpx;
-			background-color: #ccc;
+			background-color: #F39800;
+			color: #FFFFFF;
 		}
-		.Group{
+
+		.newly:active {
+			background-color: #DB8900;
+		}
+
+		.Group {
 			width: 600rpx;
 			height: 350rpx;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			.header{
+
+			.header {
 				margin: 20rpx 0;
 				font-size: 36rpx;
 				font-weight: 500;
 			}
-			.put{
+
+			.put {
 				margin-top: 30rpx;
 				width: 500rpx;
 				height: 100rpx;
 			}
-			.btns{
+
+			.btns {
 				margin-top: 50rpx;
-				width: 500rpx;
+				width: 100%;
 				display: flex;
 				justify-content: space-between;
-				.confirm{
+
+
+				.confirm {
 					width: 150rpx;
 					height: 50rpx;
 					border-radius: 50rpx;
@@ -251,11 +257,12 @@
 					text-align: center;
 					line-height: 50rpx;
 				}
-				.cancellation{
+
+				.cancellation {
 					width: 150rpx;
 					height: 50rpx;
 					border-radius: 50rpx;
-					background-color: rgba(243,152,0,0.2);
+					background-color: rgba(243, 152, 0, 0.2);
 					color: #F39800;
 					font-size: 26rpx;
 					text-align: center;

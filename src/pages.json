@@ -9,7 +9,23 @@
 		{
 			"path": "pages/Home/index",
 			"style": {
-				"navigationBarTitleText": "首页",
+				"navigationBarTitleText": "用户与群聊",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#FFFFFF"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/Share/index",
+			"style": {
+				"navigationBarTitleText": "分享与支付",
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
@@ -25,7 +41,7 @@
 		{
 			"path": "pages/User/index",
 			"style": {
-				"navigationBarTitleText": "我的",
+				"navigationBarTitleText": "用户信息",
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
@@ -54,13 +70,19 @@
 				"iconPath": "static/tabbar/home.png",
 				"selectedIconPath": "static/tabbar/homeSt.png",
 				"pagePath": "pages/Home/index",
-				"text": "%tabbar.home%"
+				"text": "用户与群聊"
 			},
+			{
+					"iconPath": "static/tabbar/coin.png",
+					"selectedIconPath": "static/tabbar/coinSt.png",
+					"pagePath": "pages/Share/index",
+					"text": "分享与支付"
+				},
 			{
 				"iconPath": "static/tabbar/user.png",
 				"selectedIconPath": "static/tabbar/userSt.png",
 				"pagePath": "pages/User/index",
-				"text": "%tabbar.mine%"
+				"text": "用户信息"
 			}
 		]
 	},

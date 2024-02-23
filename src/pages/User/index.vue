@@ -19,7 +19,7 @@
 				<view class="information">{{upgrade}}</view>
 			</view>
 		</view>
-		<view class="leveUp" @click="generateOrder">会员升级</view>
+		<!-- <view class="leveUp" @click="generateOrder">会员升级</view> -->
 	</view>
 </template>
 
@@ -47,42 +47,40 @@
 		}
 	})
 	
-
-
-	const generateOrder = () => {
-		createOrder("1", 2002, "会员升级").then((res) => {
-			goDoPay(res.data.order_id, res.data.pay_call_back_url)
-		}).catch((err) => {
-			uni.showToast({
-				title: "订单生成失败" + err,
-				icon: 'none'
-			})
-		})
-	}
+	// const generateOrder = () => {
+	// 	createOrder("1", 2002, "会员升级").then((res) => {
+	// 		goDoPay(res.data.order_id, res.data.pay_call_back_url)
+	// 	}).catch((err) => {
+	// 		uni.showToast({
+	// 			title: "订单生成失败" + err,
+	// 			icon: 'none'
+	// 		})
+	// 	})
+	// }
 
 	
-	const goDoPay = (orderID, callbackUrl) => {
-		let appID = "TeltlkOfficialAccountdgkTest"
-		TeltlkModule.DoPay(appID, orderID, 2002,"1", callbackUrl).then((res) => {
-			if (res.result > 0) {
-				uni.showToast({
-					title: "升级会员成功",
-					icon: 'none'
-				})
-				upgrade.value = "会员用户"
-			}else{
-				uni.showToast({
-					title: "订单支付失败" + res.result,
-					icon: 'none'
-				})
-			}
-		}).catch((err) => {
-			uni.showToast({
-				title: "订单支付失败" + err,
-				icon: 'none'
-			})
-		})
-	}
+	// const goDoPay = (orderID, callbackUrl) => {
+	// 	let appID = "TeltlkOfficialAccountdgkTest"
+	// 	TeltlkModule.DoPay(appID, orderID, 2002,"1", callbackUrl).then((res) => {
+	// 		if (res.result > 0) {
+	// 			uni.showToast({
+	// 				title: "升级会员成功",
+	// 				icon: 'none'
+	// 			})
+	// 			upgrade.value = "会员用户"
+	// 		}else{
+	// 			uni.showToast({
+	// 				title: "订单支付失败" + res.result,
+	// 				icon: 'none'
+	// 			})
+	// 		}
+	// 	}).catch((err) => {
+	// 		uni.showToast({
+	// 			title: "订单支付失败" + err,
+	// 			icon: 'none'
+	// 		})
+	// 	})
+	// }
 </script>
 
 <style scoped lang="scss">
