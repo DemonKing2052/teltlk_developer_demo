@@ -62,7 +62,7 @@
 
 <script setup>
 	import article from './component/article.js'
-	import TeltlkModule from '@/utils/TeltlkModule.js'
+	import tkBridge from '@/utils/tkBridge.js'
 	import {
 		createOrder
 	} from "@/request/https.js"
@@ -84,7 +84,7 @@
 
 	const SharingArticles = () => {
 		let Sharing = List.value
-		TeltlkModule.UserSharing(Sharing.title, Sharing.desc, Sharing.snapIcon, Sharing.sourceName, Sharing.sourceIcon)
+		tkBridge.UserSharing(Sharing.title, Sharing.desc, Sharing.snapIcon, Sharing.sourceName, Sharing.sourceIcon)
 			.then((res) => {
 				
 			}).catch((err) => {
@@ -111,7 +111,7 @@
 
 	const goDoPay = (orderID, callbackUrl,money) => {
 		let appID = "TeltlkOfficialAccountdgkTest"
-		TeltlkModule.DoPay(appID, orderID, 2002, money, callbackUrl).then((res) => {
+		tkBridge.DoPay(appID, orderID, 2002, money, callbackUrl).then((res) => {
 			clear()
 			if (res.result > 0) {
 				uni.showToast({

@@ -58,7 +58,7 @@
 
 <script setup>
 	import infor from './component/infor.js'
-	import TeltlkModule from '@/utils/TeltlkModule.js'
+	import tkBridge from '@/utils/tkBridge.js'
 	import {
 		ref
 	} from 'vue'
@@ -79,7 +79,7 @@
 
 
 	const GroupMember = (groupID, OpenID) => {
-		TeltlkModule.IsGroupMember(groupID, OpenID).then((res) => {
+		tkBridge.IsGroupMember(groupID, OpenID).then((res) => {
 			Joingroup(groupID)
 		}).catch((err) => {
 			uni.showToast({
@@ -91,7 +91,7 @@
 
 	const Joingroup = (GroupID) => {
 		console.log(GroupID)
-		TeltlkModule.JoinGroup(GroupID).then((res) => {
+		tkBridge.JoinGroup(GroupID).then((res) => {
 			console.log("加入群聊成功")
 		}).catch((err) => {
 			uni.showToast({
@@ -103,7 +103,7 @@
 
 	const ContactUsers = (openID) => {
 		console.log(openID)
-		TeltlkModule.AddFriend(openID).then((res) => {
+		tkBridge.AddFriend(openID).then((res) => {
 			console.log("添加好友调用成功")
 		}).catch((err) => {
 			uni.showToast({
@@ -120,7 +120,7 @@
 		});
 		show.value = false
 		let user = uni.getStorageSync("User")
-		TeltlkModule.CreateGroup(groupName, user.openID).then((res) => {
+		tkBridge.CreateGroup(groupName, user.openID).then((res) => {
 			let group = {
 				name: res.groupName,
 				GroupID: res.groupID,
@@ -242,10 +242,9 @@
 
 			.btns {
 				margin-top: 50rpx;
-				width: 100%;
+				width: 500rpx;
 				display: flex;
 				justify-content: space-between;
-
 
 				.confirm {
 					width: 150rpx;

@@ -32,7 +32,7 @@
 		onShow
 	} from '@dcloudio/uni-app'
 	import user from './component/user.js'
-	import TeltlkModule from '@/utils/TeltlkModule.js'
+	import tkBridge from '@/utils/tkBridge.js'
 	import {
 		createOrder
 	} from "@/request/https.js"
@@ -61,7 +61,7 @@
 	
 	// const goDoPay = (orderID, callbackUrl) => {
 	// 	let appID = "TeltlkOfficialAccountdgkTest"
-	// 	TeltlkModule.DoPay(appID, orderID, 2002,"1", callbackUrl).then((res) => {
+	// 	tkBridge.DoPay(appID, orderID, 2002,"1", callbackUrl).then((res) => {
 	// 		if (res.result > 0) {
 	// 			uni.showToast({
 	// 				title: "升级会员成功",
