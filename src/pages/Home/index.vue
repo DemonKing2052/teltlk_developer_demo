@@ -58,13 +58,13 @@
 
 <script setup>
 	import infor from './component/infor.js'
-	import tkBridge from '@/utils/tkBridge.js'
 	import {
 		ref
 	} from 'vue'
 	import {
 		onLoad
 	} from '@dcloudio/uni-app'
+	import tkBridge from '@/utils/tkBridge.js'
 
 	const show = ref(false)
 

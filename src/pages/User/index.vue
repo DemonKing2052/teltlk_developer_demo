@@ -32,10 +32,10 @@
 		onShow
 	} from '@dcloudio/uni-app'
 	import user from './component/user.js'
-	import tkBridge from '@/utils/tkBridge.js'
 	import {
 		createOrder
 	} from "@/request/https.js"
+	import tkBridge from '@/utils/tkBridge.js'
 
 	const userInfo = ref()
 	const upgrade = ref('普通用户')

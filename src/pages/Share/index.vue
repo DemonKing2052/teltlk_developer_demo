@@ -62,7 +62,6 @@
 
 <script setup>
 	import article from './component/article.js'
-	import tkBridge from '@/utils/tkBridge.js'
 	import {
 		createOrder
 	} from "@/request/https.js"
@@ -72,6 +71,7 @@
 	import {
 		onLoad
 	} from '@dcloudio/uni-app'
+	import tkBridge from '@/utils/tkBridge.js'
 
 	const List = ref({})
 	const show = ref(false)

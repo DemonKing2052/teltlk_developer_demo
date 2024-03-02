@@ -1,7 +1,7 @@
 <script>
 	import manifest from './manifest.json'
-	import tkBridge from './utils/tkBridge.js'
 	import md5 from './utils/md5.js'
+	import tkBridge from '@/utils/tkBridge.js'
 
 	export default {
 		onLaunch: function() {
