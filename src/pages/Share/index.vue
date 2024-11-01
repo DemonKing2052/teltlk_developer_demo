@@ -97,7 +97,7 @@
 
 	const RewardingArticles = (money) => {
 		show.value = false
-		createOrder(money, 2002, "打赏").then((res) => {
+		createOrder(money, 2002, "打赏",true).then((res) => {
 			goDoPay(res.data.order_id, res.data.pay_call_back_url,money)
 		}).catch((err) => {
 			uni.showToast({
